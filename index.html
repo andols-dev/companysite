@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+
+
+    .menu {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+
+    .nav a:not(:first-child):hover{
+        background: #e8654e;
+        color: #fff;
+
+    }
+
+    .nav-item a.is-tab, a.nav-item.is-tab {
+        border: none;
+    }
+    .menu-label {
+        padding: 20px;
+        cursor: pointer;
+        background: #ff6347;
+        color: #fff;
+    }
+
+    .menu-label:hover {
+        background: #e8654e;
+    }
+    .active {
+        background: #e8654e;
+    }
+
+    .menu a {
+        padding-left: 30px;
+    }
+    .menu a:hover {
+        color: #e8654e;
+    }
+
+    .menu-label:not(:last-child) {
+     margin-bottom: 0px;
+}
+
+    .menu-label:not(:first-child) {
+    margin-top: 0px;
+    }
+
+    @media only screen and (min-width: 1px) and (max-width: 766px) {
+        #general, #admin, #invitations {
+            display: none!important;
+
+        }
+    }
+
+
+    @media only screen and (min-width: 767px) {
+        .menu {
+            display: none;
+        }
+        #general, #admin, #invitations {
+            background: #ecdfdf;
+            min-height: 300px;
+
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="nav has-shadow">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">Admin
+
+          </a>
+          <a class="nav-item is-tab is-hidden-mobile" onclick="test(event,'general')">General</a>
+          <a class="nav-item is-tab is-hidden-mobile" onclick="test(event,'admin')">Administration</a>
+          <a class="nav-item is-tab is-hidden-mobile" onclick="test(event,'invitations')">Transactions</a>
+
+        </div>
+        <span id="toggleNav" class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+          <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
+          <a class="nav-item is-tab is-hidden-tablet">Features</a>
+          <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
+          <a class="nav-item is-tab is-hidden-tablet">About</a>
+          <a class="nav-item is-tab">
+            <figure class="image is-16x16" style="margin-right: 8px;">
+              <img src="http://bulma.io/images/jgthms.png">
+            </figure>
+            Profile
+          </a>
+          <a class="nav-item is-tab">Log out</a>
+        </div>
+      </div>
+    </nav>
+    <div id="general" class="linkTabs" >
+        <div class="container">
+            <p>GENERAl</p>
+            <ul>
+              <li><a>Dashboard</a></li>
+              <li><a>Customers</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="admin" class="linkTabs">
+        <div class="container">
+            <p>admin</p>
+            <ul>
+              <li><a>Team Settings</a></li>
+              <li>
+                <a >Manage Your Team</a>
+
+              </li>
+              <li><a>Invitations</a></li>
+              <li><a>Cloud Storage Environment Settings</a></li>
+              <li><a>Authentication</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="invitations" class="linkTabs">
+        <div class="container">
+            <p>transactions</p>
+            <ul>
+              <li><a>Payments</a></li>
+              <li><a>Transfers</a></li>
+              <li><a>Balance</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <aside id="test" class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li><a>Customers</a></li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a >Manage Your Team</a>
+
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside>
+<script>
+    let menuLists = document.getElementsByClassName('menu-list');
+    let menuLabels = document.getElementsByClassName('menu-label');
+    let toggleMenuBtn = document.getElementById('toggleNav');
+    let linkTabs = document.getElementsByClassName('linkTabs');
+    for ( let linkTab of linkTabs ) {
+        linkTab.hidden = true;
+    }
+
+
+
+    toggleMenuBtn.addEventListener('click', () => {
+        document.getElementById('test').classList.toggle('show');
+    });
+    for ( let menuList of menuLists ) {
+        menuList.hidden = true;
+    }
+
+    for ( let menuLabel of menuLabels ) {
+        menuLabel.addEventListener('click', (event) => {
+            for ( let menuLabel of menuLabels )   {
+                menuLabel.classList.remove('active');
+            }
+            for ( let menuList of menuLists ) {
+                menuList.hidden = true;
+            }
+            event.target.nextElementSibling.hidden = false;
+
+            event.target.classList.add('active');
+        });
+    }
+
+
+
+    function test(event, category) {
+
+        for ( let linkTab of linkTabs ) {
+            linkTab.hidden = true;
+        }
+
+        document.getElementById(category).hidden = false;
+
+    }
+
+    addEventListener('click', () => {
+        if (!event.target.matches('.linkTabs, .nav-item, .linkTabs a, .linkTabs p')) {
+            console.log('fff');
+            for ( let linkTab of linkTabs ) {
+                linkTab.hidden = true;
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
