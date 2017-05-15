@@ -14,11 +14,26 @@
     .show {
         display: block;
     }
-
+    .nav a:hover {
+        color: #fff;
+    }
     .nav a:not(:first-child):hover{
         background: #e8654e;
-        color: #fff;
 
+
+    }
+    #toggleNav {
+        background: none;
+    }
+    #toggleNav span {
+        background: #fff;
+    }
+    .nav {
+        background: linear-gradient(162deg,#3d3d3d,#414141 41%,#3d3d3d 0);
+    }
+
+    .nav a {
+        color: #fff;
     }
 
     .nav-item a.is-tab, a.nav-item.is-tab {
@@ -27,7 +42,7 @@
     .menu-label {
         padding: 20px;
         cursor: pointer;
-        background: #ff6347;
+        background: #3d3d3d;
         color: #fff;
     }
 
@@ -102,7 +117,7 @@
             </figure>
             Profile
           </a>
-          <a class="nav-item is-tab">Log out</a>
+          <a href="login.html" class="nav-item is-tab">Logga in</a>
         </div>
       </div>
     </nav>
