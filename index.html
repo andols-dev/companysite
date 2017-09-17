@@ -323,7 +323,7 @@
         <div class="columns">
         <div class="column is-half">
 
-            <div class="card">
+            <div class="card animate">
   <div class="card-image">
     <figure class="image is-4by3">
       <img src="imgs/pexels-photo-346301.jpeg" alt="Image">
@@ -341,7 +341,7 @@
         </div>
         <div class="column is-half">
 
-            <div class="card">
+            <div class="card animate">
   <div class="card-image">
     <figure class="image is-4by3">
       <img src="imgs/pexels-photo-284847.jpeg" alt="Image">
@@ -403,6 +403,7 @@
 
         for ( let linkTab of linkTabs ) {
             linkTab.hidden = true;
+
         }
 
         document.getElementById(category).hidden = false;
@@ -420,7 +421,7 @@
 
     window.sr = ScrollReveal();
 
-    sr.reveal('.info .card', { duration: 2000,origin:'bottom', distance: '300px' }, 550);
+    sr.reveal('.info .animate', { duration: 2000,origin:'bottom', distance: '300px' }, 550);
 
 
 
