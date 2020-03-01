@@ -3,76 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #fff;
-            background: linear-gradient(102deg,#3d3d3d,#414141 41%,#3d3d3d 0);
-            min-height: 2000px;
-        }
-        form {
-            border-radius: 3px;
-            background-color: #373636;
-            text-align: center;
-
-            padding: 25px 45px;
-            color: #fff;
-            border: 1px solid white;
-
-
-
-            margin-bottom: 24px;
-            width: 60%;
-            margin: 220px auto;
-            max-width: 600px;
-
-        }
-        input, button {
-            padding: 20px;
-        }
-        input {
-            background: #fff;
-            margin-top: 20px;
-
-
-
-        }
-
-
-
-        input[type="text"],input[type="password"], button[type="submit"] {
-            width: 100%;
-        }
-
-
-        button, input {
-            border: none;
-        }
-
-        button:focus, input:focus {
-            outline: none;
-        }
-        button {
-            background: #e8654e;
-            margin-top: 20px;
-            color: #fff;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
     <form >
         <h1>Log in</h1>
-
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <button type="submit" name="type" value="articles">Log in</button></form>
-
+        <input type="text" placeholder="Enter Username" name="uname" >
+        <input type="password" placeholder="Enter Password" name="psw" >
+        <button type="submit" name="type" value="articles">Log in</button>
+    </form>
 </body>
 </html>
