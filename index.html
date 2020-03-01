@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
 
     <title>Company website</title>
-   
-</head>
-<body>
+  </head>
+  <body>
     <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
           <a class="nav-item">Company Name</a>
-          <a class="nav-item is-tab is-hidden-mobile" onclick="test(event,'general')">General</a>
-          <a class="nav-item is-tab is-hidden-mobile" onclick="test(event,'admin')">Administration</a>
-          <a class="nav-item is-tab is-hidden-mobile" onclick="test(event,'invitations')">Transactions</a>
+          <a
+            class="nav-item is-tab is-hidden-mobile"
+            onclick="test(event,'general')"
+            >General</a
+          >
+          <a
+            class="nav-item is-tab is-hidden-mobile"
+            onclick="test(event,'admin')"
+            >Administration</a
+          >
+          <a
+            class="nav-item is-tab is-hidden-mobile"
+            onclick="test(event,'invitations')"
+            >Transactions</a
+          >
         </div>
         <span id="toggleNav" class="nav-toggle">
           <span></span>
@@ -32,162 +49,174 @@
         </div>
       </div>
     </nav>
-    <div id="general" class="linkTabs" >
+    <div id="general" class="linkTabs">
+      <div class="container">
         <div class="container">
-            <div class="container">
-                <div class="columns">
-                  <div class="column">
-                      <h1>General</h1>
-                      <ul>
-                        <li><a>Dashboard</a></li>
-                        <li><a>Customers</a></li>
-                      </ul>
-                  </div>
-                  <div class="column">
-                    <img src="imgs/pexels-photo-245032.jpeg" alt="">
-                  </div>
-                  <div class="column">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quaerat libero nulla quibusdam dolorem quae repudiandae officiis nostrum alias asperiores suscipit, voluptatum, cumque tempore obcaecati at nobis praesentium aspernatur! Cupiditate?</p>
-                  </div>
-                  <div class="column">
-                    <img src="imgs/pexels-photo-380769.jpeg" alt="">
-                  </div>
-                </div>
-
+          <div class="columns">
+            <div class="column">
+              <h1>General</h1>
+              <ul>
+                <li><a>Dashboard</a></li>
+                <li><a>Customers</a></li>
+              </ul>
             </div>
+            <div class="column">
+              <img src="imgs/pexels-photo-245032.jpeg" alt="" />
+            </div>
+            <div class="column">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Facilis quaerat libero nulla quibusdam dolorem quae repudiandae
+                officiis nostrum alias asperiores suscipit, voluptatum, cumque
+                tempore obcaecati at nobis praesentium aspernatur! Cupiditate?
+              </p>
+            </div>
+            <div class="column">
+              <img src="imgs/pexels-photo-380769.jpeg" alt="" />
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <div id="admin" class="linkTabs">
-        <div class="container">
-            <div class="columns">
-              <div class="column">
-                  <h1>Administration</h1>
-                  <ul>
-                    <li><a>Team Settings</a></li>
-                    <li>
-                      <a >Manage Your Team</a>
-                    </li>
-                    <li><a>Invitations</a></li>
-                    <li><a>Cloud Storage Environment Settings</a></li>
-                    <li><a>Authentication</a></li>
-                  </ul>
-              </div>
-              <div class="column">
-                <img src="imgs/people-coffee-tea-meeting.jpg" alt="">
-              </div>
-              <div class="column">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam esse molestias in, eius quisquam ducimus blanditiis laboriosam, veritatis fuga. Ipsam tempora saepe perspiciatis dolor quidem perferendis dicta quod inventore beatae.</p>
-              </div>
-              <div class="column">
-                <img src="imgs/coffee-desk-notes-workspace.jpg" alt="">
-              </div>
-            </div>
-
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h1>Administration</h1>
+            <ul>
+              <li><a>Team Settings</a></li>
+              <li>
+                <a>Manage Your Team</a>
+              </li>
+              <li><a>Invitations</a></li>
+              <li><a>Cloud Storage Environment Settings</a></li>
+              <li><a>Authentication</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <img src="imgs/people-coffee-tea-meeting.jpg" alt="" />
+          </div>
+          <div class="column">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+              esse molestias in, eius quisquam ducimus blanditiis laboriosam,
+              veritatis fuga. Ipsam tempora saepe perspiciatis dolor quidem
+              perferendis dicta quod inventore beatae.
+            </p>
+          </div>
+          <div class="column">
+            <img src="imgs/coffee-desk-notes-workspace.jpg" alt="" />
+          </div>
         </div>
+      </div>
     </div>
     <div id="invitations" class="linkTabs">
-        <div class="container">
-            <div class="columns">
-              <div class="column">
-                  <h1>Transactions</h1>
-                  <ul>
-                    <li><a>Payments</a></li>
-                    <li><a>Transfers</a></li>
-                    <li><a>Balance</a></li>
-                  </ul>
-              </div>
-              <div class="column">
-                <img src="imgs/pexels-photo-95916.jpeg" alt="">
-              </div>
-              <div class="column">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias deleniti, doloremque nobis cumque corrupti amet culpa assumenda nam cum quod eum corporis repellat, rerum delectus vel beatae ipsum obcaecati totam.</p>
-              </div>
-              <div class="column">
-                <img src="imgs/pexels-photo-284847.jpeg" alt="">
-              </div>
-            </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h1>Transactions</h1>
+            <ul>
+              <li><a>Payments</a></li>
+              <li><a>Transfers</a></li>
+              <li><a>Balance</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <img src="imgs/pexels-photo-95916.jpeg" alt="" />
+          </div>
+          <div class="column">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Molestias deleniti, doloremque nobis cumque corrupti amet culpa
+              assumenda nam cum quod eum corporis repellat, rerum delectus vel
+              beatae ipsum obcaecati totam.
+            </p>
+          </div>
+          <div class="column">
+            <img src="imgs/pexels-photo-284847.jpeg" alt="" />
+          </div>
         </div>
-
+      </div>
     </div>
 
     <aside id="test" class="menu">
-  <p class="menu-label">
-    General
-  </p>
-  <ul class="menu-list">
-    <li><a>Dashboard</a></li>
-    <li><a>Customers</a></li>
-  </ul>
-  <p class="menu-label">
-    Administration
-  </p>
-  <ul class="menu-list">
-    <li><a>Team Settings</a></li>
-    <li>
-      <a >Manage Your Team</a>
+      <p class="menu-label">
+        General
+      </p>
+      <ul class="menu-list">
+        <li><a>Dashboard</a></li>
+        <li><a>Customers</a></li>
+      </ul>
+      <p class="menu-label">
+        Administration
+      </p>
+      <ul class="menu-list">
+        <li><a>Team Settings</a></li>
+        <li>
+          <a>Manage Your Team</a>
+        </li>
+        <li><a>Invitations</a></li>
+        <li><a>Cloud Storage Environment Settings</a></li>
+        <li><a>Authentication</a></li>
+      </ul>
+      <p class="menu-label">
+        Transactions
+      </p>
+      <ul class="menu-list">
+        <li><a>Payments</a></li>
+        <li><a>Transfers</a></li>
+        <li><a>Balance</a></li>
+      </ul>
+    </aside>
 
-    </li>
-    <li><a>Invitations</a></li>
-    <li><a>Cloud Storage Environment Settings</a></li>
-    <li><a>Authentication</a></li>
-  </ul>
-  <p class="menu-label">
-    Transactions
-  </p>
-  <ul class="menu-list">
-    <li><a>Payments</a></li>
-    <li><a>Transfers</a></li>
-    <li><a>Balance</a></li>
-  </ul>
-</aside>
-
-<div class="hero">
-    <div class="hero-text">
-    <h1>Our company</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id error </p>
-    <button>More info</button>
-  </div>
-</div>
-
-<div class="info">
-    <div class="container">
-        <div class="columns">
-        <div class="column is-half">
-            <div class="card animate">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="imgs/pexels-photo-346301.jpeg" alt="Image">
-        </figure>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Our company</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id error
+        </p>
+        <button>More info</button>
       </div>
-  <div class="card-content">
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris.
     </div>
-  </div>
-</div>
-        </div>
-        <div class="column is-half">
-            <div class="card animate">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="imgs/pexels-photo-284847.jpeg" alt="Image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris.
-    </div>
-  </div>
-</div>
-        </div>
-    </div>
-    </div>
-</div>
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-<script src="main.js">
-  
-</body>
+    <div class="info">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half">
+            <div class="card animate">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="imgs/pexels-photo-346301.jpeg" alt="Image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="card animate">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="imgs/pexels-photo-284847.jpeg" alt="Image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script src="main.js" />
+  </body>
 </html>
